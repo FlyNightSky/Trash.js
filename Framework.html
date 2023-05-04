@@ -1,0 +1,29 @@
+<!--
+
+                            Online HTML Compiler.
+                Code, Compile, Run and Debug HTML program online.
+Write your code in this editor and press "Run" button to execute it.
+
+-->
+
+<html>
+
+<body>
+    <input placeholder="props here" id="text" onchange="change()">
+    <h1 id="dom">Loading DOM...</h1>
+</body>
+
+</html>
+
+<script>
+    function change() {
+        const text = document.getElementById("text").value;
+        render(text)
+
+    }
+
+    function render(props) {
+        let DOM = document.getElementById('dom');
+        DOM.innerHTML = "Hello," + props + " welcome to L.js";
+    }
+</script>
